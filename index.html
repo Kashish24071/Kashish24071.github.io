@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kashish Upendraraj Singh — Software Engineer</title>
+<meta name="description" content="Kashish Upendraraj Singh — software engineer building data pipelines, ML systems and AI tools. Software Engineer Intern at the Federal Reserve Bank of Dallas; MS ITM at UT Dallas (May 2027).">
+<meta property="og:title" content="Kashish Upendraraj Singh — Software Engineer">
+<meta property="og:description" content="Data pipelines, ML systems and AI tools. Dallas Fed · HDFC Bank · UT Dallas.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A0C10">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0C10'/%3E%3Ctext x='32' y='41' font-family='monospace' font-size='26' font-weight='700' fill='%23F5B35C' text-anchor='middle'%3EKS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#0A0C10; --panel:#10131A; --text:#E7EAF0; --soft:#C3C9D4; --muted:#A3ACBB; --dim:#7C8596;
+  --line:rgba(231,234,240,0.12); --chip:rgba(231,234,240,0.06);
+  --accent:#F5B35C; --accent-rgb:245,179,92;
+  --sans:'Space Grotesk',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--text)}a:hover{color:#fff}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:24px;padding-right:24px}
+section[id]{scroll-margin-top:16px}
+.mono{font-family:var(--mono)}
+.kicker{font-family:var(--mono);font-size:13px;color:var(--accent)}
+.h2{margin:0;font-size:clamp(34px,4.4vw,56px);line-height:1.05;letter-spacing:-.02em;font-weight:700}
+.sec-head{display:flex;flex-direction:column;gap:12px}
+.chip{display:inline-block;padding:6px 12px;border-radius:8px;background:var(--chip);font-family:var(--mono);font-size:12px;color:var(--soft)}
+.label{font-family:var(--mono);font-size:12px;color:var(--dim);letter-spacing:.08em}
+.lift{transition:transform .25s ease,border-color .25s ease,background .25s ease,opacity .25s ease,color .25s ease}
+.lift:hover{transform:translateY(-2px)}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes ping{0%{transform:scale(.55);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+.cursor{animation:blink 1s steps(1) infinite;color:var(--accent)}
+.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+
+/* nav */
+header.nav{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding-top:24px;padding-bottom:24px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .logo{width:40px;height:40px;border-radius:10px;border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:14px;color:var(--accent)}
+.brand .name{font-weight:600;font-size:16px}
+nav.links{display:flex;flex-wrap:wrap;gap:4px;font-family:var(--mono);font-size:13px}
+nav.links a{text-decoration:none;padding:12px;color:var(--muted)}
+nav.links a:hover{color:var(--text)}
+
+/* hero */
+#top{position:relative;min-height:820px;overflow:hidden;margin-top:-88px;cursor:crosshair}
+#bg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-inner{position:relative;z-index:1;min-height:820px;padding-top:120px;padding-bottom:80px;display:flex;flex-direction:column;justify-content:center;gap:26px}
+.hello{margin:0;font-family:var(--mono);font-size:14px;color:var(--accent)}
+h1{margin:0;font-size:clamp(44px,7.4vw,104px);line-height:.98;font-weight:700;letter-spacing:-.03em;max-width:11ch}
+.typed{margin:0;font-size:clamp(22px,2.6vw,34px);line-height:1.25;font-weight:500;min-height:2.6em;max-width:900px}
+.typed .pre{color:var(--muted)}
+.intro{margin:0;font-size:18px;line-height:1.65;color:#B4BCC8;max-width:640px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{text-decoration:none;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;font-size:16px;cursor:pointer}
+.btn-primary{background:var(--accent);color:var(--bg);border:none}
+.btn-primary:hover{color:var(--bg)}
+.btn-ghost{border:1px solid rgba(231,234,240,.25);color:var(--text);background:rgba(10,12,16,.6);font-weight:500}
+.social{display:flex;flex-wrap:wrap;gap:8px}
+.social a{text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:10px;background:rgba(10,12,16,.6);border:1px solid var(--line);color:var(--soft);font-family:var(--mono);font-size:13px}
+.hint{position:absolute;z-index:1;right:24px;bottom:24px;font-family:var(--mono);font-size:12px;color:var(--dim)}
+
+/* journey */
+#journey{padding-top:40px;display:flex;flex-direction:column;gap:32px}
+.j-head{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between}
+.pill-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid rgba(231,234,240,.2);background:transparent;color:var(--text);font-family:var(--mono);font-size:13px;cursor:pointer}
+.track-scroll{overflow-x:auto;padding-bottom:8px}
+.track{position:relative;min-width:1000px}
+.rail{position:absolute;top:22px;left:calc(100%/14);right:calc(100%/14);height:2px;background:var(--line)}
+.rail-fill{height:100%;width:0;background:var(--accent);box-shadow:0 0 14px rgba(var(--accent-rgb),.55);transition:width .8s cubic-bezier(.2,.7,.2,1)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));position:relative}
+.steps li{display:flex;justify-content:center}
+.step{display:flex;flex-direction:column;align-items:center;gap:12px;padding:0 8px 8px;border:none;background:transparent;color:var(--text);cursor:pointer}
+.node{position:relative;width:44px;height:44px;display:flex;align-items:center;justify-content:center}
+.dot{width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid rgba(231,234,240,.35);transition:all .35s ease}
+.step.future .dot{border-style:dashed}
+.step.reached .dot{background:var(--accent);border-color:var(--accent);border-style:solid}
+.step.sel .dot{width:24px;height:24px;box-shadow:0 0 0 6px rgba(var(--accent-rgb),.18),0 0 22px rgba(var(--accent-rgb),.6)}
+.ping{position:absolute;inset:0;border-radius:50%;border:2px solid var(--accent);animation:ping 1.8s ease-out infinite}
+.step .date{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.step.sel .date{color:var(--accent)}
+.step .t{font-size:16px;font-weight:600;text-align:center;line-height:1.3;color:#8A93A3}
+.step.reached .t{color:var(--soft)}
+.step.sel .t{color:#fff}
+.card{padding:32px;border-radius:20px;border:1px solid var(--line);background:var(--panel)}
+.j-card{display:flex;flex-wrap:wrap;gap:24px 48px}
+.j-main{flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:10px}
+.j-main h3{margin:0;font-size:30px;line-height:1.15;font-weight:700}
+.j-main p{margin:0;font-size:17px;line-height:1.65;color:var(--soft);max-width:62ch}
+.j-side{flex:1 1 260px;min-width:0;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.arrows{display:flex;align-items:center;gap:8px}
+.round{width:44px;height:44px;border-radius:50%;border:1px solid rgba(231,234,240,.2);background:transparent;color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer}
+
+/* work */
+.block{padding-top:120px;padding-bottom:40px;display:flex;flex-direction:column;gap:32px}
+.filter{display:flex;flex-direction:column;gap:12px}
+.filter-label{font-size:15px;color:var(--muted)}
+.fchip{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(231,234,240,.2);background:transparent;color:var(--soft);font-family:var(--mono);font-size:13px;cursor:pointer}
+.fchip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.work-grid{display:flex;flex-wrap:wrap;gap:24px;align-items:stretch}
+.plist{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:10px}
+.pitem{text-align:left;display:flex;gap:18px;align-items:flex-start;padding:18px 22px;border-radius:14px;border:1px solid rgba(231,234,240,.1);background:transparent;color:var(--text);cursor:pointer}
+.pitem .n{font-family:var(--mono);font-size:13px;color:var(--dim);padding-top:4px}
+.pitem .tt{display:flex;flex-direction:column;gap:4px}
+.pitem .tt b{font-size:19px;font-weight:600}
+.pitem .tt span{font-size:14px;color:var(--muted)}
+.pitem[aria-pressed="true"]{border-color:var(--accent);background:rgba(231,234,240,.05)}
+.pitem[aria-pressed="true"] .n{color:var(--accent)}
+.pitem.dimmed{opacity:.35}
+.pdetail{flex:999 1 520px;min-width:0;padding:36px;display:flex;flex-direction:column;gap:26px;position:relative;overflow:hidden}
+.bignum{position:absolute;right:24px;top:8px;font-size:140px;font-weight:700;line-height:1;color:rgba(231,234,240,.04);pointer-events:none}
+.pdetail h3{margin:0;font-size:34px;line-height:1.1;letter-spacing:-.01em;font-weight:700}
+.pdetail .desc{margin:0;font-size:17px;line-height:1.65;color:var(--soft);max-width:60ch}
+.bul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.bul li{display:flex;gap:12px;font-size:16px;line-height:1.5}
+.bul li::before{content:"→";color:var(--accent);font-family:var(--mono)}
+.split{display:flex;flex-wrap:wrap;gap:20px}
+.split > div{min-width:0;display:flex;flex-direction:column;gap:12px}
+.impact{flex:1.4 1 280px;padding:18px 20px;border-radius:14px;background:rgba(var(--accent-rgb),.08);border:1px solid rgba(var(--accent-rgb),.35)}
+.impact .lab{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.08em}
+.impact p{margin:0;font-size:16px;line-height:1.55}
+.plink{font-size:15px;font-weight:500;color:var(--accent)}
+
+/* experience */
+.xp{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.xp > li{display:flex;flex-wrap:wrap;gap:16px 40px;padding:40px 0;border-bottom:1px solid var(--line)}
+.xp .when{flex:0 0 220px;display:flex;flex-direction:column;gap:6px;padding-top:6px}
+.xp .when b{font-family:var(--mono);font-size:13px;color:var(--accent);font-weight:400}
+.xp .when span{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.xp .what{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.xp h3{margin:0;font-size:26px;font-weight:600}
+.xp .role{font-size:16px;color:var(--soft)}
+.xp ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.xp ul li{display:flex;gap:12px;font-size:16px;line-height:1.55;color:var(--soft)}
+.xp ul li::before{content:"▸";color:var(--accent)}
+.xp strong{color:var(--text)}
+
+/* toolkit */
+.tk{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.tk > div{display:flex;flex-direction:column;gap:14px;padding:24px;border-radius:16px;border:1px solid rgba(231,234,240,.1);background:var(--panel)}
+.tk .lab{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--accent)}
+.tk .chip{font-family:var(--sans);font-size:14px;color:var(--text)}
+
+/* contact */
+#contact{padding-top:120px;padding-bottom:96px;display:flex;flex-direction:column;gap:28px}
+.big{margin:0;font-size:clamp(44px,8vw,112px);line-height:.95;letter-spacing:-.03em;font-weight:700;max-width:12ch}
+.mail{min-height:56px;font-size:clamp(15px,1.6vw,19px);max-width:100%;overflow-wrap:anywhere}
+footer{padding-top:28px;padding-bottom:40px;border-top:1px solid rgba(231,234,240,.1);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-family:var(--mono);font-size:12px;color:var(--dim)}
+footer a{color:var(--dim);text-decoration:none}
+
+@media (max-width:640px){
+  .hint{display:none}
+  .card,.pdetail{padding:24px}
+  .xp .when{flex-basis:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rise,.cursor,.ping{animation:none}
+  .lift,.rail-fill,.dot{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav wrap">
+  <a class="brand" href="#top"><span class="logo">KS</span><span class="name">Kashish Singh</span></a>
+  <nav class="links" aria-label="Main">
+    <a href="#journey">01. journey</a>
+    <a href="#work">02. work</a>
+    <a href="#experience">03. experience</a>
+    <a href="#toolkit">04. toolkit</a>
+    <a href="#contact">05. contact</a>
+  </nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="top">
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="hero-inner wrap">
+    <p class="hello rise">// hello, world — I'm</p>
+    <h1 class="rise" style="animation-delay:.1s">Kashish Upendraraj Singh</h1>
+    <p class="typed rise" style="animation-delay:.2s" aria-live="off"><span class="pre">I build </span><span id="typed"></span><span class="cursor" aria-hidden="true">▍</span></p>
+    <p class="intro rise" style="animation-delay:.3s">I'm a software engineer who turns messy, real-world data into clean pipelines, research-ready datasets and ML systems people can trust. After two years shipping ML and automation at HDFC Bank, I'm now a Software Engineer Intern at the Federal Reserve Bank of Dallas and finishing my MS in Information Technology &amp; Management at UT Dallas (GPA 3.89, May 2027).</p>
+    <div class="rise" style="display:flex;flex-direction:column;gap:18px;animation-delay:.4s">
+      <div class="cta-row">
+        <a class="btn btn-primary lift" href="#work">See my work
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+        <a class="btn btn-ghost lift" href="resume.pdf" target="_blank" rel="noopener">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+          Résumé
+        </a>
+      </div>
+      <div class="social">
+        <a class="lift" href="https://www.linkedin.com/in/kashishsingh24" target="_blank" rel="noopener">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <a class="lift" href="https://github.com/Kashish24071" target="_blank" rel="noopener">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub</a>
+        <a class="lift" href="mailto:kashishusingh@gmail.com">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
+      </div>
+    </div>
+  </div>
+  <span class="hint" aria-hidden="true">hover to clean the raw data · click to inject a burst</span>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="wrap">
+  <div class="j-head">
+    <div class="sec-head"><span class="kicker">01 / journey</span><h2 class="h2">The road so far</h2></div>
+    <button class="pill-btn lift" id="play" type="button"></button>
+  </div>
+  <div class="track-scroll">
+    <div class="track">
+      <div class="rail" aria-hidden="true"><div class="rail-fill" id="railFill"></div></div>
+      <ol class="steps" id="steps"></ol>
+    </div>
+  </div>
+  <article class="card j-card" aria-live="polite">
+    <div class="j-main">
+      <span class="kicker" id="jTag"></span>
+      <h3 id="jTitle"></h3>
+      <p id="jDesc"></p>
+    </div>
+    <div class="j-side">
+      <div class="chips" id="jChips"></div>
+      <div class="arrows">
+        <button class="round lift" id="prev" type="button" aria-label="Previous milestone"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button class="round lift" id="next" type="button" aria-label="Next milestone"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        <span class="mono" id="jCount" style="font-size:12px;color:var(--dim);padding-left:6px"></span>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- WORK -->
+<section id="work" class="wrap block">
+  <div class="sec-head"><span class="kicker">02 / selected work</span><h2 class="h2">Things I've built</h2></div>
+  <div class="filter">
+    <span class="filter-label" id="filterLabel"></span>
+    <div class="chips" id="fchips" role="group" aria-label="Filter projects by tool"></div>
+  </div>
+  <div class="work-grid">
+    <div class="plist" id="plist"></div>
+    <article class="card pdetail" aria-live="polite">
+      <span class="bignum" id="dNum" aria-hidden="true"></span>
+      <div style="display:flex;flex-direction:column;gap:10px;position:relative">
+        <span class="kicker" id="dKind"></span>
+        <h3 id="dTitle"></h3>
+        <p class="desc" id="dDesc"></p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;position:relative">
+        <span class="label">WHAT I BUILT</span>
+        <ul class="bul" id="dPoints"></ul>
+      </div>
+      <div class="split" style="position:relative">
+        <div style="flex:1 1 220px"><span class="label">TOOLS I USED</span><div class="chips" id="dStack"></div></div>
+        <div class="impact">
+          <span class="lab"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>IMPACT</span>
+          <p id="dImpact"></p>
+        </div>
+      </div>
+      <div id="dFoot" style="margin-top:auto;position:relative"></div>
+    </article>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="wrap block">
+  <div class="sec-head"><span class="kicker">03 / experience</span><h2 class="h2">Where I've worked</h2></div>
+  <ol class="xp">
+    <li>
+      <div class="when"><b>Jun 2026 — Present</b><span>Dallas, TX · Internship</span></div>
+      <div class="what">
+        <div><h3>Federal Reserve Bank of Dallas</h3><span class="role">Software Engineer Intern · Research Department</span></div>
+        <ul>
+          <li><span>Engineered a rerunnable Python pipeline scoring technology exposure across <strong>21,155 SEC EDGAR 10-K filings (1,971 U.S. banks, 1994–2025)</strong>, cutting manual data extraction time by <strong>90%</strong>.</span></li>
+          <li><span>Explored and integrated five FFIEC datasets into a <strong>2.5M-observation branch panel</strong> in R, documenting methods and presenting findings to research economists.</span></li>
+          <li><span>Automated a weekly AI news digest that keeps technical and non-technical leadership current on the AI landscape.</span></li>
+        </ul>
+        <div class="chips"><span class="chip">Python</span><span class="chip">R</span><span class="chip">Pandas</span><span class="chip">dplyr</span><span class="chip">SEC EDGAR</span><span class="chip">FFIEC data</span></div>
+      </div>
+    </li>
+    <li>
+      <div class="when"><b>Aug 2023 — Aug 2025</b><span>Mumbai, India · Full-time</span></div>
+      <div class="what">
+        <div><h3>HDFC Bank</h3><span class="role">Software Engineer</span></div>
+        <ul>
+          <li><span>Gathered requirements from operations stakeholders, then built and deployed an ensemble ML anomaly detection model across NetBanking and MobileBanking, reaching <strong>95% accuracy</strong>.</span></li>
+          <li><span>Built real-time Oracle GoldenGate lag monitoring in Cisco AppDynamics, reducing incident detection and resolution time (MTTD / MTTR) by <strong>40%</strong>.</span></li>
+          <li><span>Automated transaction reporting on Microsoft Power Platform, cutting a 20-minute daily job to <strong>under 10 seconds (~87 hours saved a year)</strong>.</span></li>
+          <li><span>Automated SIT testing with Pytest within the SDLC, cutting runtime by <strong>92%</strong>, and ran knowledge-transfer sessions and process documentation for new teammates.</span></li>
+        </ul>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Machine Learning</span><span class="chip">Oracle GoldenGate</span><span class="chip">AppDynamics</span><span class="chip">Power BI</span><span class="chip">Power Automate</span><span class="chip">Pytest</span><span class="chip">AWS</span></div>
+      </div>
+    </li>
+    <li>
+      <div class="when"><b>Expected May 2027</b><span>Richardson, TX · Education</span></div>
+      <div class="what">
+        <div><h3>The University of Texas at Dallas</h3><span class="role">MS, Information Technology &amp; Management · GPA 3.89</span></div>
+        <ul>
+          <li><span><strong>Pandian Fellowship</strong> recipient, Naveen Jindal School of Management.</span></li>
+          <li><span>Coursework: Database Foundations, Applied Machine Learning, Big Data, Business Analytics, Advanced Statistics for Data Science, Spreadsheet Modeling.</span></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="when"><b>Jul 2023</b><span>Navi Mumbai, India · Education</span></div>
+      <div class="what">
+        <div><h3>University of Mumbai · SIES Graduate School of Technology</h3><span class="role">Bachelor of Engineering, Information Technology · GPA 3.8</span></div>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- TOOLKIT -->
+<section id="toolkit" class="wrap block">
+  <div class="sec-head"><span class="kicker">04 / toolkit</span><h2 class="h2">What I work with</h2></div>
+  <div class="tk" id="tk"></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="wrap">
+  <span class="kicker">05 / contact</span>
+  <h2 class="big">Let's build something.</h2>
+  <p style="margin:0;font-size:18px;line-height:1.6;color:var(--muted);max-width:580px">Open to spring 2027 internships and full-time software and data engineering roles after May 2027. The fastest way to reach me is email.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary mail lift" href="mailto:kashishusingh@gmail.com">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      kashishusingh@gmail.com
+    </a>
+    <button class="pill-btn lift" id="copy" type="button" style="min-height:56px">
+      <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+      <span id="copyLabel">Copy email</span>
+    </button>
+  </div>
+  <div class="cta-row">
+    <a class="btn btn-ghost lift" href="https://www.linkedin.com/in/kashishsingh24" target="_blank" rel="noopener" style="font-size:15px">
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+    <a class="btn btn-ghost lift" href="https://github.com/Kashish24071" target="_blank" rel="noopener" style="font-size:15px">
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub</a>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <span>© <span id="year">2026</span> Kashish Upendraraj Singh</span>
+  <a href="#top">Back to top ↑</a>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var EMAIL = 'kashishusingh@gmail.com';
+  var reduce = false;
+  try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+  var $ = function (id) { return document.getElementById(id); };
+  function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+  $('year').textContent = new Date().getFullYear();
+
+  /* ---------------- data ---------------- */
+  var JOURNEY = [
+    { short: 'B.E. in IT', date: 'Jul 2023', tag: 'Education', title: 'Bachelor of Engineering in IT',
+      desc: 'Graduated from SIES Graduate School of Technology (University of Mumbai) in Navi Mumbai with a 3.8 GPA.',
+      chips: ['Information Technology', 'GPA 3.8'] },
+    { short: 'HDFC Bank', date: 'Aug 2023', tag: 'Industry', title: 'Software Engineer at HDFC Bank',
+      desc: 'Two years shipping ML and automation for NetBanking and MobileBanking: an anomaly detection model at 95% accuracy, real-time monitoring that cut MTTD / MTTR by 40%, and reporting automation that saves ~87 hours a year.',
+      chips: ['95% accuracy', '−40% MTTD / MTTR', '~87 hrs / yr saved', '−92% test runtime'] },
+    { short: 'UT Dallas', date: 'Fall 2025', tag: 'Education', title: 'MS in Information Technology & Management',
+      desc: 'Moved to Dallas for the MSITM at UT Dallas’ Naveen Jindal School of Management, with coursework in machine learning, big data, analytics and statistics. GPA 3.89.',
+      chips: ['GPA 3.89', 'Machine learning', 'Big data'] },
+    { short: 'Pandian Fellowship', date: '2026', tag: 'Honor', title: 'Pandian Fellow at JSOM',
+      desc: 'Awarded the Pandian Fellowship at the Naveen Jindal School of Management for my second year.',
+      chips: ['Fellowship', 'JSOM'] },
+    { short: 'Dallas Fed', date: 'Jun 2026 · now', tag: 'Now', title: 'Software Engineer Intern at the Dallas Fed',
+      desc: 'Building the data pipelines behind economic research: a rerunnable pipeline over 21,155 SEC 10-K filings that cut manual extraction by 90%, and a 2.5M-observation bank branch panel from five FFIEC datasets.',
+      chips: ['21,155 filings', '−90% manual work', '2.5M-row panel'] },
+    { short: 'Graduation', date: 'May 2027', tag: 'Next', title: 'Graduating from UT Dallas',
+      desc: 'Completing the MSITM with a focus on data engineering and AI systems.',
+      chips: ['MSITM', 'Class of 2027'] },
+    { short: 'What’s next', date: '2027 →', tag: 'Goal', title: 'Your team?',
+      desc: 'Looking for a spring 2027 internship and full-time software and data engineering roles after graduation. If you are building with data or AI, let’s talk.',
+      chips: ['Software engineering', 'Data engineering', 'AI systems'] }
+  ];
+  var NOW = 4;
+
+  var PROJECTS = [
+    { title: 'Texas Grid Demand Forecasting', kind: 'Machine learning · UT Dallas',
+      desc: 'Day-ahead forecasting of Texas (ERCOT) power demand, so grid operators can prepare for heat waves and peak load.',
+      points: ['Blended XGBoost with neural networks to forecast demand 24 hours ahead', 'Used SHAP to explain what drives each forecast', 'Benchmarked against a baseline forecast to prove the gain'],
+      skills: ['Python', 'XGBoost', 'Scikit-learn', 'SHAP', 'Machine Learning'],
+      impact: 'Forecasts Texas power demand 24 hours ahead at 2.13% error, 48% better than the baseline, giving grid operators a reliable day-ahead view of demand.' },
+    { title: 'MedGraph AI: Medical Assistant', kind: 'Generative AI · Graduate project',
+      desc: 'A generative AI proof of concept that maps symptoms to likely conditions, combining a Neo4j knowledge graph with a ChromaDB vector store.',
+      points: ['RAG pipeline with prompt engineering and embeddings for semantic symptom search', 'Hybrid retrieval: graph relationships from Neo4j plus vector similarity from ChromaDB', 'Streamlit app that flags emergencies and generates doctor-ready reports'],
+      skills: ['Python', 'Neo4j', 'ChromaDB', 'Streamlit', 'RAG / LLMs'],
+      impact: 'A working demo that flags emergencies and hands patients a doctor-ready report of their symptoms.' },
+    { title: 'Incident Prediction System', kind: 'ML in production · HDFC Bank',
+      desc: 'An early-warning system that predicts banking incidents before they reach customers.',
+      points: ['Tuned classification models to flag banking incidents before impact', 'Deployed on AWS real-time pipelines for automated early-warning alerts', 'Presented results to IT leadership'],
+      skills: ['Python', 'Machine Learning', 'AWS', 'AppDynamics', 'SQL'],
+      impact: 'Running in production as an automated early-warning system, alerting teams to incidents before customers feel them.',
+      note: 'Built at HDFC Bank · code is internal' },
+    { title: 'Bank Technology Exposure from 10-Ks', kind: 'Data engineering · Dallas Fed',
+      desc: 'A rerunnable pipeline that reads three decades of bank annual reports and scores how exposed each bank is to technology.',
+      points: ['Parsed 21,155 SEC EDGAR 10-K filings across 1,971 U.S. banks (1994–2025)', 'Handled exhibits and stripped inline XBRL so text is measured consistently', 'Found and fixed silent parsing bugs that would have skewed the results'],
+      skills: ['Python', 'Pandas', 'SEC EDGAR'],
+      impact: 'Cut manual data extraction time by 90% and gave economists a rerunnable dataset spanning 30+ years.',
+      note: 'Built at the Dallas Fed · code is internal' },
+    { title: 'Catalyst: Student Performance Tracker', kind: 'Full-stack web app',
+      desc: 'A web app that tracks academic records for students, teachers and parents in one place.',
+      points: ['Full-stack app with role-based views for students, teachers and parents', 'Machine learning career prediction that recommends academic paths', 'Python model served alongside a Node.js / EJS app on MongoDB'],
+      skills: ['Node.js', 'MongoDB', 'Python', 'Machine Learning'],
+      impact: 'Career prediction recommends academic paths with 90% accuracy, so students get guidance from their own performance data.' }
+  ];
+  var SKILLS = ['Python', 'SQL', 'Machine Learning', 'XGBoost', 'SHAP', 'RAG / LLMs', 'Neo4j', 'ChromaDB', 'Streamlit', 'AWS', 'AppDynamics', 'Pandas', 'Node.js', 'MongoDB'];
+  var TOOLKIT = [
+    ['LANGUAGES', ['Python', 'R', 'SQL', 'C', 'MATLAB', 'Shell scripting']],
+    ['DATABASES & BIG DATA', ['MySQL', 'Oracle', 'MongoDB', 'Neo4j', 'ChromaDB', 'Apache Spark', 'Apache Kafka', 'Hadoop', 'Databricks']],
+    ['AI / ML', ['Generative AI', 'LLMs', 'RAG', 'LangChain', 'Embeddings', 'Prompt engineering', 'NLP', 'Time series']],
+    ['FRAMEWORKS & TOOLS', ['Pandas', 'Scikit-learn', 'dplyr', 'statsmodels', 'Stata', 'Pytest', 'Selenium']],
+    ['CLOUD & PLATFORMS', ['Microsoft Azure', 'AWS', 'Docker', 'CI/CD', 'Git', 'Linux']],
+    ['DATA VIZ & BI', ['Power BI', 'Power Automate', 'Tableau', 'Advanced Excel']]
+  ];
+  var ROLES = ['data pipelines that feed research.', 'ML models that catch incidents early.', 'RAG systems over knowledge graphs.', "forecasts that see tomorrow's demand."];
+
+  /* ---------------- typing ---------------- */
+  (function () {
+    var out = $('typed');
+    if (reduce) { out.textContent = ROLES[0]; return; }
+    var ri = 0, ci = 0, del = false, hold = 0;
+    setInterval(function () {
+      var w = ROLES[ri];
+      if (hold > 0) { hold--; return; }
+      if (!del) { ci++; if (ci >= w.length) { del = true; hold = 30; } }
+      else { ci--; if (ci <= 0) { del = false; ri = (ri + 1) % ROLES.length; hold = 5; } }
+      out.textContent = w.slice(0, ci);
+    }, 55);
+  })();
+
+  /* ---------------- journey ---------------- */
+  var jIdx = NOW, playing = false, timer = null, touched = false, stepBtns = [];
+  JOURNEY.forEach(function (st, i) {
+    var li = el('li');
+    var b = el('button', 'step');
+    b.type = 'button';
+    var node = el('span', 'node');
+    if (i === NOW) { var p = el('span', 'ping'); p.setAttribute('aria-hidden', 'true'); node.appendChild(p); }
+    node.appendChild(el('span', 'dot'));
+    b.appendChild(node);
+    b.appendChild(el('span', 'date', st.date));
+    b.appendChild(el('span', 't', st.short));
+    if (i > NOW) b.classList.add('future');
+    b.addEventListener('click', function () { touched = true; halt(); setJ(i); });
+    li.appendChild(b);
+    $('steps').appendChild(li);
+    stepBtns.push(b);
+  });
+  function setJ(i) {
+    jIdx = i;
+    stepBtns.forEach(function (b, k) {
+      b.classList.toggle('reached', k <= i);
+      b.classList.toggle('sel', k === i);
+      b.setAttribute('aria-pressed', k === i ? 'true' : 'false');
+    });
+    $('railFill').style.width = (i / (JOURNEY.length - 1) * 100).toFixed(2) + '%';
+    var j = JOURNEY[i];
+    $('jTag').textContent = j.tag + ' · ' + j.date;
+    $('jTitle').textContent = j.title;
+    $('jDesc').textContent = j.desc;
+    var c = $('jChips'); c.innerHTML = '';
+    j.chips.forEach(function (t) { c.appendChild(el('span', 'chip', t)); });
+    $('jCount').textContent = (i + 1) + ' / ' + JOURNEY.length;
+  }
+  var PLAY_ICON = '<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg>';
+  var PAUSE_ICON = '<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+  function paintPlay() { $('play').innerHTML = (playing ? PAUSE_ICON : PLAY_ICON) + '<span>' + (playing ? 'Pause' : 'Play my journey') + '</span>'; }
+  function halt() { clearInterval(timer); playing = false; paintPlay(); }
+  function play(stopAt) {
+    clearInterval(timer); playing = true; paintPlay(); setJ(0);
+    timer = setInterval(function () {
+      var n = jIdx + 1;
+      if (n > stopAt) { halt(); return; }
+      setJ(n);
+      if (n >= stopAt) halt();
+    }, 1300);
+  }
+  $('play').addEventListener('click', function () { if (playing) { halt(); return; } touched = true; play(JOURNEY.length - 1); });
+  $('prev').addEventListener('click', function () { touched = true; halt(); setJ(Math.max(0, jIdx - 1)); });
+  $('next').addEventListener('click', function () { touched = true; halt(); setJ(Math.min(JOURNEY.length - 1, jIdx + 1)); });
+  setJ(NOW); paintPlay();
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (es) {
+      if (es.some(function (e) { return e.isIntersecting; })) { io.disconnect(); if (!touched) play(NOW); }
+    }, { threshold: 0.35 });
+    io.observe($('journey'));
+  }
+
+  /* ---------------- projects ---------------- */
+  var active = 0, skill = null, chipBtns = [], itemBtns = [];
+  SKILLS.forEach(function (k) {
+    var b = el('button', 'fchip lift', k); b.type = 'button'; b.setAttribute('aria-pressed', 'false');
+    b.addEventListener('click', function () {
+      skill = skill === k ? null : k;
+      if (skill && PROJECTS[active].skills.indexOf(skill) === -1) {
+        for (var i = 0; i < PROJECTS.length; i++) if (PROJECTS[i].skills.indexOf(skill) !== -1) { active = i; break; }
+      }
+      renderWork();
+    });
+    $('fchips').appendChild(b); chipBtns.push(b);
+  });
+  PROJECTS.forEach(function (p, i) {
+    var b = el('button', 'pitem lift'); b.type = 'button';
+    b.appendChild(el('span', 'n', String(i + 1).padStart(2, '0')));
+    var tt = el('span', 'tt'); tt.appendChild(el('b', null, p.title)); tt.appendChild(el('span', null, p.kind));
+    b.appendChild(tt);
+    b.addEventListener('click', function () { active = i; renderWork(); });
+    $('plist').appendChild(b); itemBtns.push(b);
+  });
+  function renderWork() {
+    chipBtns.forEach(function (b) { b.setAttribute('aria-pressed', b.textContent === skill ? 'true' : 'false'); });
+    itemBtns.forEach(function (b, i) {
+      b.setAttribute('aria-pressed', i === active ? 'true' : 'false');
+      b.classList.toggle('dimmed', !!skill && PROJECTS[i].skills.indexOf(skill) === -1);
+    });
+    $('filterLabel').textContent = skill ? 'Highlighting work that uses ' + skill + ' (tap it again to clear)' : 'Tap a tool to see where I have used it';
+    var p = PROJECTS[active];
+    $('dNum').textContent = String(active + 1).padStart(2, '0');
+    $('dKind').textContent = p.kind;
+    $('dTitle').textContent = p.title;
+    $('dDesc').textContent = p.desc;
+    var ul = $('dPoints'); ul.innerHTML = '';
+    p.points.forEach(function (t) { ul.appendChild(el('li', null, t)); });
+    var st = $('dStack'); st.innerHTML = '';
+    p.skills.forEach(function (t) { st.appendChild(el('span', 'chip', t)); });
+    $('dImpact').textContent = p.impact;
+    var f = $('dFoot'); f.innerHTML = '';
+    if (p.note) { var s = el('span', 'mono', p.note); s.style.cssText = 'font-size:12px;color:var(--dim)'; f.appendChild(s); }
+    else { var a = el('a', 'plink', 'See my code on GitHub ↗'); a.href = 'https://github.com/Kashish24071'; a.target = '_blank'; a.rel = 'noopener'; f.appendChild(a); }
+  }
+  renderWork();
+
+  /* ---------------- toolkit ---------------- */
+  TOOLKIT.forEach(function (g) {
+    var d = el('div', 'lift'); d.appendChild(el('span', 'lab', g[0]));
+    var c = el('div', 'chips'); g[1].forEach(function (t) { c.appendChild(el('span', 'chip', t)); });
+    d.appendChild(c); $('tk').appendChild(d);
+  });
+
+  /* ---------------- copy email ---------------- */
+  var ct;
+  $('copy').addEventListener('click', function () {
+    var done = function () { $('copyLabel').textContent = 'Copied!'; clearTimeout(ct); ct = setTimeout(function () { $('copyLabel').textContent = 'Copy email'; }, 1800); };
+    try { navigator.clipboard.writeText(EMAIL).then(done, function () {}); } catch (e) {}
+  });
+
+  /* ---------------- background: raw data → pipeline → forecast ---------------- */
+  var canvas = $('bg'), ctx = canvas.getContext('2d'), hero = $('top');
+  var W = 1, H = 1, t = 0, nodes = [], pulses = [], target = 0, DENS = 90;
+  var mouse = { x: -9999, y: -9999 };
+  var RGB = '245,179,92';
+
+  function zones() { var z2 = W * 0.62; return { z1: W * 0.30, z2: z2, now: z2 + (W - z2) * 0.55 }; }
+  function pipeY(x) { return H * 0.52 - H * 0.11 * (0.65 * Math.sin(x * 0.010 - t * 0.9) + 0.35 * Math.sin(x * 0.027 - t * 1.7)); }
+  function laneTarget(p, x) {
+    var z = zones();
+    if (x >= z.z2) return pipeY(x) + p.j;
+    var pr = Math.max(0, Math.min(1, (x - z.z1) / (z.z2 - z.z1)));
+    var s = pr * pr * (3 - 2 * pr);
+    var base = H * (0.26 + 0.065 * p.lane);
+    return base + (pipeY(z.z2) + p.j - base) * s;
+  }
+  function makeP(x, y) {
+    return { x: x, y: y, vx: 0.5 + Math.random() * 0.7, vy: (Math.random() - 0.5) * 0.6,
+      lane: (Math.random() * 7) | 0, j: (Math.random() - 0.5) * 6, sp: 1.2 + Math.random() * 0.8,
+      r: Math.random() * 1.4 + 0.9, clean: 0 };
+  }
+  function seed() {
+    target = Math.round(DENS * 1.8 * Math.max(0.4, W / 1440));
+    var z = zones(); nodes = [];
+    for (var i = 0; i < target; i++) {
+      var x = Math.random() * W, p = makeP(x, H * (0.1 + Math.random() * 0.8));
+      if (x >= z.z1) p.y = laneTarget(p, x);
+      nodes.push(p);
+    }
+  }
+  function resize() {
+    var r = hero.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var nw = Math.max(1, r.width), nh = Math.max(1, r.height);
+    var changed = Math.abs(nw - W) > 1 || Math.abs(nh - H) > 1;
+    W = nw; H = nh;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (changed || !nodes.length) seed();
+    if (reduce) frame();
+  }
+
+  function frame() {
+    var z = zones(), i, j, p;
+    t += 0.016;
+    ctx.clearRect(0, 0, W, H);
+
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'rgba(' + RGB + ',0.08)';
+    for (var l = 0; l < 7; l++) {
+      ctx.beginPath();
+      for (var k = 0; k <= 24; k++) {
+        var lx = z.z1 + (z.z2 - z.z1) * k / 24, ly = laneTarget({ lane: l, j: 0 }, lx);
+        if (k === 0) ctx.moveTo(lx, ly); else ctx.lineTo(lx, ly);
+      }
+      ctx.stroke();
+    }
+
+    var spread = function (x) { return H * 0.015 + (x - z.now) / Math.max(1, W - z.now) * H * 0.07; };
+    ctx.beginPath();
+    var x;
+    for (x = z.now; x <= W; x += 8) ctx.lineTo(x, pipeY(x) - spread(x));
+    for (x = W; x >= z.now; x -= 8) ctx.lineTo(x, pipeY(x) + spread(x));
+    ctx.closePath();
+    ctx.fillStyle = 'rgba(' + RGB + ',0.08)';
+    ctx.fill();
+
+    ctx.beginPath();
+    for (x = z.z2; x <= z.now; x += 6) { if (x === z.z2) ctx.moveTo(x, pipeY(x)); else ctx.lineTo(x, pipeY(x)); }
+    ctx.strokeStyle = 'rgba(231,234,240,0.32)'; ctx.lineWidth = 1.5; ctx.stroke();
+
+    ctx.beginPath();
+    for (x = z.now; x <= W; x += 6) { if (x === z.now) ctx.moveTo(x, pipeY(x)); else ctx.lineTo(x, pipeY(x)); }
+    ctx.setLineDash([6, 6]); ctx.strokeStyle = 'rgba(' + RGB + ',0.85)'; ctx.lineWidth = 2; ctx.stroke();
+
+    ctx.setLineDash([2, 5]); ctx.strokeStyle = 'rgba(231,234,240,0.18)'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(z.now, H * 0.2); ctx.lineTo(z.now, H * 0.84); ctx.stroke();
+    ctx.setLineDash([]);
+
+    if (W >= 720) {
+      ctx.font = "11px 'JetBrains Mono', monospace"; ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(231,234,240,0.38)';
+      ctx.fillText('raw data', z.z1 / 2, H - 64);
+      ctx.fillText('pipeline', (z.z1 + z.z2) / 2, H - 64);
+      ctx.fillText('model', (z.z2 + z.now) / 2, H - 64);
+      ctx.fillText('now', z.now, H * 0.2 - 10);
+      ctx.fillStyle = 'rgba(' + RGB + ',0.75)';
+      ctx.fillText('forecast →', (z.now + W) / 2, H - 64);
+    }
+
+    for (i = 0; i < nodes.length; i++) {
+      var a = nodes[i]; if (a.x >= z.z1) continue;
+      for (j = i + 1; j < nodes.length; j++) {
+        var b = nodes[j]; if (b.x >= z.z1) continue;
+        var dx = a.x - b.x, dy = a.y - b.y;
+        if (Math.abs(dx) > 70 || Math.abs(dy) > 70) continue;
+        var d = Math.hypot(dx, dy);
+        if (d < 70) {
+          ctx.strokeStyle = 'rgba(231,234,240,' + ((1 - d / 70) * 0.12).toFixed(3) + ')';
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+        }
+      }
+    }
+
+    var glow = [], out = [];
+    for (i = 0; i < nodes.length; i++) {
+      p = nodes[i];
+      if (p.x < z.z1) {
+        p.vx = p.vx * 0.96 + 0.85 * 0.04 + (Math.random() - 0.5) * 0.12 + p.clean * 0.05;
+        p.vy = p.vy * 0.96 + (Math.random() - 0.5) * 0.12;
+        p.x += p.vx; p.y += p.vy;
+        if (p.y < H * 0.08 || p.y > H * 0.92) { p.vy *= -1; p.y = Math.max(H * 0.08, Math.min(H * 0.92, p.y)); }
+        if (p.x < -20) p.x = -20;
+        for (var q = 0; q < pulses.length; q++) {
+          var pl = pulses[q], px = p.x - pl.x, py = p.y - pl.y, pd = Math.hypot(px, py);
+          if (Math.abs(pd - pl.r) < 26 && pd > 0.1) { p.x += px / pd * 2 * pl.life; p.y += py / pd * 2 * pl.life; }
+        }
+      } else {
+        p.x += p.sp * (p.x < z.z2 ? 1.1 : 1.3);
+        p.y += (laneTarget(p, p.x) - p.y) * (p.x < z.z2 ? 0.06 : 0.14);
+      }
+      var mdx = p.x - mouse.x, mdy = p.y - mouse.y, md = Math.hypot(mdx, mdy);
+      if (md < 150) p.clean = 1;
+      if (md < 200) {
+        ctx.strokeStyle = 'rgba(' + RGB + ',' + ((1 - md / 200) * 0.5).toFixed(3) + ')';
+        ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
+      }
+      p.clean *= 0.995;
+      if (p.x > W + 12) {
+        if (nodes.length - out.length > target) { out.push(i); continue; }
+        var np = makeP(-10, H * (0.1 + Math.random() * 0.8));
+        for (var key in np) p[key] = np[key];
+      }
+      var pr = p.x < z.z1 ? 0 : (p.x < z.z2 ? (p.x - z.z1) / (z.z2 - z.z1) : 1);
+      var c = Math.max(pr, p.clean * 0.85);
+      if (p.x >= z.z2) { glow.push(p); continue; }
+      if (c < 0.98) { ctx.fillStyle = 'rgba(231,234,240,' + ((1 - c) * 0.55).toFixed(3) + ')'; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill(); }
+      if (c > 0.02) { ctx.fillStyle = 'rgba(' + RGB + ',' + (c * 0.95).toFixed(3) + ')'; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill(); }
+    }
+    for (i = out.length - 1; i >= 0; i--) nodes.splice(out[i], 1);
+
+    ctx.shadowColor = 'rgba(' + RGB + ',0.9)'; ctx.shadowBlur = 8; ctx.fillStyle = 'rgba(' + RGB + ',1)';
+    for (i = 0; i < glow.length; i++) { p = glow[i]; ctx.beginPath(); ctx.arc(p.x, p.y, p.r + 0.4, 0, Math.PI * 2); ctx.fill(); }
+    ctx.shadowBlur = 0;
+
+    pulses = pulses.filter(function (pl) {
+      pl.r += 6; pl.life -= 0.014;
+      if (pl.life <= 0) return false;
+      ctx.strokeStyle = 'rgba(' + RGB + ',' + (pl.life * 0.5).toFixed(3) + ')'; ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.arc(pl.x, pl.y, pl.r, 0, Math.PI * 2); ctx.stroke();
+      return true;
+    });
+    ctx.lineWidth = 1;
+  }
+
+  var visible = true;
+  function loop() { if (visible && !document.hidden) frame(); requestAnimationFrame(loop); }
+
+  hero.addEventListener('mousemove', function (e) { var r = canvas.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+  hero.addEventListener('mouseleave', function () { mouse.x = -9999; mouse.y = -9999; });
+  hero.addEventListener('click', function (e) {
+    if (e.target.closest('a,button')) return;
+    var r = canvas.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+    pulses.push({ x: x, y: y, r: 0, life: 1 });
+    if (nodes.length < target * 2.2) {
+      for (var i = 0; i < 28; i++) {
+        var p = makeP(x, y), a = Math.random() * Math.PI * 2, s = 1 + Math.random() * 3;
+        p.vx = Math.cos(a) * s; p.vy = Math.sin(a) * s; p.clean = 1; nodes.push(p);
+      }
+    }
+    if (reduce) frame();
+  });
+
+  if ('ResizeObserver' in window) new ResizeObserver(resize).observe(hero);
+  else window.addEventListener('resize', resize);
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }).observe(hero);
+  resize();
+  if (!reduce) requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
